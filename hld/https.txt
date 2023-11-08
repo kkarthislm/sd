@@ -4,4 +4,4 @@
 4. HTTP response status codes 1XX, 2XX, 3XX, 4XX, 5XX
 5. URL, URL, URN
 6. CSP
-7. CORS
+7. CORS 
