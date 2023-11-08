@@ -1,0 +1,7 @@
+1. http 0.9, http 1.0, http 2.0, http 3.0
+2. GET, POST, DELETE, HEAD, PUT, PATCH, TRACE, OPTIONS, CONNECT, LOCK, UNLOCK, LINK
+3. HTTP headers -> request, response
+4. HTTP response status codes 1XX, 2XX, 3XX, 4XX, 5XX
+5. URL, URL, URN
+6. CSP
+7. CORS

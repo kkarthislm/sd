@@ -1,0 +1,167 @@
+class -> blueprint of methods/var 
+
+class Student{
+    string name;
+    int age;
+
+    Student( string name, int age){
+        this.name = name;
+        this.age = age;
+    }
+};
+
+
+object -> embodying the class (instance of class)
+
+class Student{
+    string name;
+    int age;
+
+    Student( string name, int age){
+        this.name = name;
+        this.age = age;
+    }
+};
+
+int main(){
+    Student s;***********
+    s.name = "german";
+    s.age = 27;
+    return 0;
+};
+
+encapsulation -> binding the data and member functions in a class
+              -> access given with the help of access modifiers
+              -> how to access (implementation level)
+
+class Student{
+private:
+    string name;
+    int age;
+public:
+    void setStudentName(string name){
+        this.name = name;
+    }
+
+    string getStudentName(){
+        return this.name;
+    }
+
+    void setStudentAge(int age){
+        this.age = age;
+    }
+
+    int getStudentAge(int age){
+        return this.age;
+    }
+};
+
+abstraction -> hiding the unwanted information (vars/functions)
+            -> using abstract class and interfaces
+            -> design level
+            -> what should be shown
+
+class Student{
+private:
+    string name;
+    int age;
+public:
+    virtual setStudentName(string name) = 0
+
+    string getStudentName(){
+        return this.name;
+    }
+
+    virtual setStudentAge(int age) = 0;
+
+    int getStudentAge(int age){
+        return this.age;
+    }
+};
+
+class Admission;public Student{
+    private:
+        Student s;
+
+    public:
+    void setStudentName(string name){
+        s.name = name;
+    }
+
+    void setStudentAge(int age){
+        s.age = age;
+    }
+
+    void createAdmission(strng name, int age){
+        setStudentName(name);
+        setStudentAge(age);
+    }
+};
+
+inheritance -> code reusability
+            -> using parent class methods
+class A{};
+class B;public A{ A a;}
+int main(){ B b; return 0;}
+
+polymorphism -> many form (methods/interfaces)
+
+// compile time
+int add(int a, int b){ return a+b;};
+float add(float a, float b){return a+b};
+int main(){
+    add(1,2);
+    add(1.1, 2,2);
+    return 0;
+};
+
+// run time
+class A{}
+class B:public A{};
+class C:public A{};
+int main(){
+    A a;
+    a = b;
+    a = c;
+    return 0;
+}
+
+association -> relationship between objects 
+            -> 1 to 1, 1 to many, many to many..
+
+class Employee{};
+class Department{ Employee emp;}
+int main() {
+    Department de;
+    de.employee = employee; 
+    return 0;
+}
+
+aggregation -> can work independently (has-A) , no ownership
+            -> subset of association, unidirectional
+
+class Student{};
+class Department{ Student stu;}
+class College{ Department de;}
+int main() {
+    College coll;
+    Department de;
+    Student stu;
+    de.student = stu; 
+    coll.de = de;
+    return 0;
+}
+
+composition -> won't work independently (part-of), with ownership
+            -> subset of association/aggregation
+class Tyre{};
+class Engine{};
+class Vehicle{ Tyre tyre; Engine engine;}
+int main(){
+    Tyre t;
+    Engine eng;
+    Vehicle v;
+    v.t = t;
+    v.eng = eng;
+    return 0;
+}
